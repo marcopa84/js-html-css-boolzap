@@ -27,14 +27,13 @@
 }
 /* struttura della parte centrale */
 .app {
-  height: 95vh;
+  height: 95%;
   width: 80%;
   position: absolute;
   top:50%;
   left: 50%;
   transform: translate(-50%, -50%);
   display: flex;
-  border: 1px solid red; /* DEBUG:  */
 }
 .border-right{
   border-right: 1px solid #B1B1B1;
@@ -42,6 +41,10 @@
 .text-name{
   font-weight: 600;
   color: black;
+}
+.text-status{
+  line-height: 30px;
+  color: #6D7577;
 }
 .text-date{
   font-size: 15px;
@@ -51,10 +54,13 @@
 /* colonne */
 .left-col{
   width: 30%;
+  background-color: #FAFAFA;
 }
 .right-col{
   width: 70%;
 }
+
+/* prima riga, comune per entrambe le colonne */
 .first-row{
   height: 70px;
   padding: 10px;
@@ -81,6 +87,7 @@
 .first-row-icons i{
   margin-left: 15px;
 }
+/* seconda riga colonna sinistra */
 .second-row{
   background-color: #8EDAFC;
   height: 80px;
@@ -108,45 +115,72 @@
 .second-row div a{
   display: block;
 }
+/* riga ricerca */
+.search-row{
+  height: 60px;
+  padding: 10px;
+}
+.search-input{
+  height: 100%;
+  width: 100%;
+}
+.search-input i{
+  float: left;
+  height: 100%;
+  width: 40px;
+  color: #B1B1B1;
+  text-align: center;
+  line-height: 40px;
+  vertical-align: middle;
+  background-color: white;
+}
+.search-input input{
+  float: left;
+  height: 100%;
+  width: calc(100% - 40px);
+  border: none;
+}
+/* lista contatti chat */
 .contact{
   background-color: #FAFAFA;
-  height: 100%;
-}
-.contact input{
-  margin: 10px;
-  padding: 10px;
-  width: 95%;
+  height: calc(100% - 210px);
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 .contact li{
-  position: relative;
   height: 80px;
-  margin-right: 10px;
   padding: 10px;
+  margin-right: 10px;
   list-style: none;
   border-bottom: 1px solid #B1B1B1;
   border-right: 1px solid #B1B1B1;
   background-color: #FFFFFF;
 }
-.contact li img{
-  height:  100%;
+.contact-image{
+  width: 20%;
+  height: 100%;
+  float: left;
 }
-.contact-name{
-  position: absolute;
-  top:40%;
-  left: 90px;
-  transform: translateY(-50%);
+.contact-image img{
+  height: 100%;
 }
-.contact-status{
-  position: absolute;
-  top:70%;
-  left: 90px;
-  transform: translateY(-50%);
-  font-size: 15px;
-  color: #6D7577;
+.contact-info{
+  width: 60%;
+  float: left;
 }
 .contact-lastmessage{
-  position: absolute;
-  top:50%;
-  right: 10px;
-  transform: translateY(-50%);
+  width: 20%;
+  float: left;
+  text-align: right;
+}
+.chat{
+  height: calc(100% - 140px);
+  background-image: url(../img/background_chat.jpg);
+  background-position: center;
+  background-repeat: repeat;
+  padding: 25px;
+}
+.message{
+  height: 70px;
+  background-color: #F3EEEA;
 }
