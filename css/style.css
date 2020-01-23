@@ -4,6 +4,9 @@
   box-sizing: border-box;
   font-family: 'Roboto', sans-serif;
 }
+i:hover{
+  cursor: pointer;
+}
 .clearfix:before{
   content: '';
   display: table;
@@ -183,6 +186,8 @@
   background-position: center;
   background-repeat: repeat;
   padding: 25px;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 .chat-message{
   padding: 10px;
@@ -198,11 +203,11 @@
   font-size: 10px;
   color: #6D7577;
 }
-.chat-in{
+.chat-out{
   background-color: #D5F9BA;
   margin-left: calc(100% - 250px);
 }
-.chat-out{
+.chat-in{
   background-color: #FFFFFF;
   margin-right: calc(100% - 250px);
 }
