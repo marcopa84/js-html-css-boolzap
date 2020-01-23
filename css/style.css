@@ -206,6 +206,10 @@
   background-color: #FFFFFF;
   margin-right: calc(100% - 250px);
 }
+/* template chat */
+.template-chat{
+  display: none;
+}
 /* riquadro comandi chat */
 .message{
   height: 90px;
