@@ -156,6 +156,9 @@
   border-right: 1px solid #B1B1B1;
   background-color: #FFFFFF;
 }
+.contact li:hover{
+  background-color: #E9EBEB;
+}
 .contact-image{
   width: 20%;
   height: 100%;
@@ -173,14 +176,63 @@
   float: left;
   text-align: right;
 }
-.chat{
-  height: calc(100% - 140px);
+/* riquadro chat */
+.chat-window{
+  height: calc(100% - 160px);
   background-image: url(../img/background_chat.jpg);
   background-position: center;
   background-repeat: repeat;
   padding: 25px;
 }
+.chat-message{
+  padding: 10px;
+  width: 250px;
+  border-radius: 10px;
+  margin: 10px 0;
+}
+.chat-text{
+  padding: 10px;
+}
+.chat-date{
+  text-align: right;
+  font-size: 10px;
+  color: #6D7577;
+}
+.chat-in{
+  background-color: #D5F9BA;
+  margin-left: calc(100% - 250px);
+}
+.chat-out{
+  background-color: #FFFFFF;
+  margin-right: calc(100% - 250px);
+}
+/* riquadro comandi chat */
 .message{
-  height: 70px;
+  height: 90px;
+  padding: 10px;
   background-color: #F3EEEA;
+}
+.command{
+  width: 70px;
+  height: 100%;
+  float: left;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.command i{
+  font-size: 22px;
+  color: #6B7375;
+}
+.message-input{
+  height: 100%;
+  width: calc( 100% - 140px);
+  float: left;
+}
+.message-input input{
+  padding: 10px;
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 5px;
 }
