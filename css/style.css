@@ -9,23 +9,23 @@
   display: table;
   clear: both;
 }
+/* struttura contenitore */
 .wrapper{
   width: 100%;
   height: 100vh;
   background-color: red;
   position: relative;
 }
-
+/* sfondi */
 .background-top{
   background-color: #009588;
   height: 15%;
 }
-
 .background-bottom{
   background-color: #D9DBD4;
   height: 85%;
 }
-
+/* struttura della parte centrale */
 .app {
   height: 95vh;
   width: 80%;
@@ -39,6 +39,16 @@
 .border-right{
   border-right: 1px solid #B1B1B1;
 }
+.text-name{
+  font-weight: 600;
+  color: black;
+}
+.text-date{
+  font-size: 15px;
+  color: #6D7577;
+}
+
+/* colonne */
 .left-col{
   width: 30%;
 }
@@ -48,7 +58,7 @@
 .first-row{
   height: 70px;
   padding: 10px;
-  background-color: #E5DDD4;
+  background-color: #EAEAEA;
   position: relative;
 }
 .first-row img{
@@ -70,4 +80,73 @@
 }
 .first-row-icons i{
   margin-left: 15px;
+}
+.second-row{
+  background-color: #8EDAFC;
+  height: 80px;
+  padding: 10px;
+  position: relative;
+}
+.second-row i{
+  display: inline-block;
+  color: #8EDAFC;
+  height: 60px;
+  width: 60px;
+  background-color: white;
+  text-align: center;
+  line-height: 60px;
+  vertical-align: middle;
+  font-size: 20px;
+  border-radius: 50%;
+}
+.second-row div{
+  position: absolute;
+  top: 50%;
+  left: 80px;
+  transform: translateY(-50%);
+}
+.second-row div a{
+  display: block;
+}
+.contact{
+  background-color: #FAFAFA;
+  height: 100%;
+}
+.contact input{
+  margin: 10px;
+  padding: 10px;
+  width: 95%;
+}
+.contact li{
+  position: relative;
+  height: 80px;
+  margin-right: 10px;
+  padding: 10px;
+  list-style: none;
+  border-bottom: 1px solid #B1B1B1;
+  border-right: 1px solid #B1B1B1;
+  background-color: #FFFFFF;
+}
+.contact li img{
+  height:  100%;
+}
+.contact-name{
+  position: absolute;
+  top:40%;
+  left: 90px;
+  transform: translateY(-50%);
+}
+.contact-status{
+  position: absolute;
+  top:70%;
+  left: 90px;
+  transform: translateY(-50%);
+  font-size: 15px;
+  color: #6D7577;
+}
+.contact-lastmessage{
+  position: absolute;
+  top:50%;
+  right: 10px;
+  transform: translateY(-50%);
 }
