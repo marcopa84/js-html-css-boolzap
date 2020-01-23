@@ -1,0 +1,32 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.wrapper{
+  width: 100%;
+  height: 100vh;
+  background-color: red;
+  position: relative;
+}
+
+.background-top{
+  background-color: #009588;
+  height: 15%;
+}
+
+.background-bottom{
+  background-color: #D9DBD4;
+  height: 85%;
+}
+
+.app {
+  background-color: red;
+  height: 95vh;
+  width: 80%;
+  position: absolute;
+  top:50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
