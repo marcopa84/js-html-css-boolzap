@@ -15,6 +15,7 @@ i:hover{
 /* struttura contenitore */
 .wrapper{
   width: 100%;
+  min-width: 1024px;
   height: 100vh;
   background-color: red;
   position: relative;
@@ -147,7 +148,6 @@ i:hover{
 .contact{
   background-color: #FAFAFA;
   height: calc(100% - 210px);
-  overflow-x: hidden;
   overflow-y: auto;
 }
 .contact li{
@@ -190,10 +190,32 @@ i:hover{
   overflow-y: auto;
 }
 .chat-message{
+  position: relative;
   padding: 10px;
   width: 250px;
   border-radius: 10px;
   margin: 10px 0;
+}
+.chat-message:hover{
+  cursor: pointer;
+}
+.chat-command{
+  text-align: right;
+  color: #B1B1B1;
+}
+.chat-command-window{
+  width: 180px;
+  height:50px;
+  padding: 10px;
+  text-align: left;
+  background-color: white;
+  border-radius: 10px;
+  position: absolute;
+  bottom: -50px;
+  right:0;
+  clear: both;
+  z-index: 2;
+  display: none;
 }
 .chat-text{
   padding: 10px;
