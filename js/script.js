@@ -1,5 +1,13 @@
 
-$(document).on('click', '#send', function () {
+//MESSAGGI
+$('#send').click(
+  function () {
+    send ();
+  }
+);
+
+
+function send() {
   var message_baloon = $('.template-chat .chat-message').clone();
   var message_input = $('#input_chat').val();
   message_baloon.addClass('chat-out');
@@ -7,9 +15,7 @@ $(document).on('click', '#send', function () {
   $('.chat-window').append(message_baloon);
   $('#input_chat').val('');
   setTimeout(reply, 1000);
-});
-
-
+}
 
 function reply() {
   var message_baloon = $('.template-chat .chat-message').clone();
@@ -19,23 +25,55 @@ function reply() {
   $('.chat-window').append(message_baloon);
 }
 
-$('#ico_search').click(
-  function () {
-    var search_input = $('#input_search').val();
-    console.log(search_input);
-    var contact_row = $('#list_contact').children('li');
-    console.log(contact_row);
-    var contact_name = $('#list_contact').children('li').children('.contact-info').children('p.text-name').text();
-    console.log(contact_name);
 
-    // for (var i = 0; i < contact_row.length; i++) {
-    //   console.log(contact_name[i]);
-    //   if (search_input == contact_name[i]) {
-    //     console.log('uguale');
-    //   }else {
-    //     contact_row.hide();
-    //     console.log('diverso');
-    //   }
-    // }
+// CONTATTI
+// $('#ico_search').click(
+//   function () {
+//     var search_input = $('#input_search').val();
+//     console.log(search_input);
+//     var contact_row = $('#list_contact').children('li');
+//     console.log(contact_row);
+//
+//     for (var i = 0; i < contact_row.length; i++) {
+//       var contact_name = $('#list_contact').children('li').children('.contact-info').children('p.text-name').eq(i).text();
+//       console.log(contact_name);
+//       if (contact_name.includes(search_input)) {
+//         contact_row.eq(i).show();
+//         console.log('uguale');
+//       }else {
+//         contact_row.eq(i).hide();
+//         console.log('diverso');
+//       }
+//     }
+//   }
+// );
+
+$('#ico_search').click(
+  function  () {
+    searchChat();
   }
 );
+$('#input_search').keyup(
+  function () {
+    searchChat();
+  }
+);
+
+function searchChat () {
+  var search_input = $('#input_search').val().toLowerCase();
+  console.log(search_input);
+  var contact_row = $('#list_contact').children('li');
+  console.log(contact_row);
+
+  for (var i = 0; i < contact_row.length; i++) {
+    var contact_name = $('#list_contact').children('li').children('.contact-info').children('p.text-name').eq(i).text().toLowerCase();
+    console.log(contact_name);
+    if (contact_name.includes(search_input)) {
+      contact_row.eq(i).show();
+      console.log('uguale');
+    }else {
+      contact_row.eq(i).hide();
+      console.log('diverso');
+    }
+  }
+}
