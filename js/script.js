@@ -59,7 +59,7 @@ $(document).ready(
         console.log(contactSelected);
         $('.chat-window').removeClass('active-window');
         // $('.chat-window [data-phone="' + contactSelected + '"]').addClass('active-window');
-        $('.chat-window [data-phone="'+contactSelected+'"]').addClass('active-window');
+        $('.chat-window[data-phone="'+contactSelected+'"]').addClass('active-window');
       }
     );
 
@@ -79,7 +79,7 @@ function send() {
   message_baloon.addClass('chat-out');
   message_baloon.children('.chat-text').text(message_input);
   message_baloon.children('.chat-date').text(getTime());
-  $('.chat-window').append(message_baloon);
+  $('.active-window').append(message_baloon);
   $('#input_chat').val('');
   setTimeout(reply, 1000);
 }
@@ -92,7 +92,7 @@ function reply() {
   message_baloon.addClass('chat-in');
   message_baloon.children('.chat-text').text(message_input[i]);
   message_baloon.children('.chat-date').text(getTime());
-  $('.chat-window').append(message_baloon);
+  $('.active-window').append(message_baloon);
   $('.first-row-data-date').text('ultimo accesso oggi, alle ' + getTime());
 }
 function getRandomIntInclusive(min, max) {
