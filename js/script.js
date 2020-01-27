@@ -94,10 +94,12 @@ function send() {
   message_baloon.addClass('chat-out');
   message_baloon.children('.chat-text').text(message_input);
   message_baloon.children('.chat-date').text(getTime());
-  $('.active-window').append(message_baloon);
-  scrollMessage();
-  $('#input_chat').val('');
-  setTimeout(reply, 1000);
+  if (message_input.length != 0){
+    $('.active-window').append(message_baloon);
+    scrollMessage();
+    $('#input_chat').val('');
+    setTimeout(reply, 1000);
+  }
 }
 
 // --risposta
