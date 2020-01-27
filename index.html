@@ -38,7 +38,19 @@
         </div>
         <div class="contact border-right">
           <ul id="list_contact">
-            <li class="clearfix">
+            <li class="clearfix" data-phone='+393339963994'>
+              <div class="contact-image">
+                <img src="img/img_2.png" alt="">
+              </div>
+              <div class="contact-info">
+                <p class="text-name">Marco</p>
+                <p class="text-status">Stato del contatto</p>
+              </div>
+              <div class="contact-lastmessage text-date">
+                <p class="text-date">18.03</p>
+              </div>
+            </li>
+            <li class="clearfix" data-phone='+393339963995'>
               <div class="contact-image">
                 <img src="img/img_3.png" alt="">
               </div>
@@ -50,7 +62,7 @@
                 <p class="text-date">18.03</p>
               </div>
             </li>
-            <li class="clearfix">
+            <li class="clearfix" data-phone='+393339963996'>
               <div class="contact-image">
                 <img src="img/img_4.png" alt="">
               </div>
@@ -62,7 +74,7 @@
                 <p class="text-date">18.03</p>
               </div>
             </li>
-            <li class="clearfix">
+            <li class="clearfix" data-phone='+393339963997'>
               <div class="contact-image">
                 <img src="img/img_5.png" alt="">
               </div>
@@ -74,24 +86,24 @@
                 <p class="text-date">18.03</p>
               </div>
             </li>
-            <li class="clearfix">
+            <li class="clearfix" data-phone='+393339963998'>
               <div class="contact-image">
                 <img src="img/img_6.png" alt="">
               </div>
               <div class="contact-info">
-                <p class="text-name">Marco</p>
+                <p class="text-name">Marco Antonio</p>
                 <p class="text-status">Stato del contatto</p>
               </div>
               <div class="contact-lastmessage text-date">
                 <p class="text-date">18.03</p>
               </div>
             </li>
-            <li class="clearfix">
+            <li class="clearfix" data-phone='+393339963999'>
               <div class="contact-image">
                 <img src="img/img_7.png" alt="">
               </div>
               <div class="contact-info">
-                <p class="text-name">Fabio</p>
+                <p class="text-name">Rosa</p>
                 <p class="text-status">Stato del contatto</p>
               </div>
               <div class="contact-lastmessage text-date">
@@ -114,10 +126,25 @@
             <i class="fas fa-ellipsis-v"></i>
           </div>
         </div>
-        <div class="chat-window clearfix">
+        <!-- Chat dei contatti -->
+        <div class="chat-window clearfix active-window" data-phone='+393339963994'>
           <div class="chat-message chat-out">
             <div class="chat-command">
-              <i class="fas fa-chevron-down"></i>
+              <i class="fas fa-chevron-down chat-icon"></i>
+              <div class="chat-command-window">
+                <p>Cancella messaggio</p>
+              </div>
+            </div>
+            <div class="chat-text">
+              Ciao come stai?
+            </div>
+            <div class="chat-date">
+              22.48
+            </div>
+          </div>
+          <div class="chat-message chat-in">
+            <div class="chat-command">
+              <i class="fas fa-chevron-down chat-icon"></i>
               <div class="chat-command-window">
                 <p>Cancella messaggio</p>
               </div>
@@ -130,6 +157,28 @@
             </div>
           </div>
           <div class="chat-message chat-out">
+            <div class="chat-command">
+              <i class="fas fa-chevron-down chat-icon"></i>
+              <div class="chat-command-window">
+                <p>Cancella messaggio</p>
+              </div>
+            </div>
+            <div class="chat-text">
+              Ciao come stai?
+            </div>
+            <div class="chat-date">
+              22.48
+            </div>
+          </div>
+        </div>
+        <div class="chat-window clearfix" data-phone='+393339963995'>
+          <div class="chat-message chat-out">
+            <div class="chat-command">
+              <i class="fas fa-chevron-down chat-icon"></i>
+              <div class="chat-command-window">
+                <p>Cancella messaggio</p>
+              </div>
+            </div>
             <div class="chat-text">
               Ciao come stai?
             </div>
@@ -138,6 +187,26 @@
             </div>
           </div>
           <div class="chat-message chat-in">
+            <div class="chat-command">
+              <i class="fas fa-chevron-down chat-icon"></i>
+              <div class="chat-command-window">
+                <p>Cancella messaggio</p>
+              </div>
+            </div>
+            <div class="chat-text">
+              Ciao CLAUDIA come stai?
+            </div>
+            <div class="chat-date">
+              22.48
+            </div>
+          </div>
+          <div class="chat-message chat-out">
+            <div class="chat-command">
+              <i class="fas fa-chevron-down chat-icon"></i>
+              <div class="chat-command-window">
+                <p>Cancella messaggio</p>
+              </div>
+            </div>
             <div class="chat-text">
               Ciao come stai?
             </div>
@@ -145,17 +214,8 @@
               22.48
             </div>
           </div>
-          <div class="template-chat">
-            <div class="chat-message">
-              <div class="chat-text">
-                Ciao come stai?
-              </div>
-              <div class="chat-date">
-                22.48
-              </div>
-            </div>
-          </div>
         </div>
+        <!-- /Chat dei contatti -->
         <div class="message clearfix">
           <div class="command">
             <i class="far fa-smile"></i>
@@ -167,6 +227,23 @@
             <i id="send" class="fas fa-paper-plane"></i>
           </div>
         </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="template-chat">
+    <div class="chat-message">
+      <div class="chat-command">
+        <i class="fas fa-chevron-down chat-icon"></i>
+        <div class="chat-command-window">
+          <p>Cancella messaggio</p>
+        </div>
+      </div>
+      <div class="chat-text">
+        Ciao come stai?
+      </div>
+      <div class="chat-date">
+        22.48
       </div>
     </div>
   </div>

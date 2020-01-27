@@ -143,6 +143,7 @@ i:hover{
   height: 100%;
   width: calc(100% - 40px);
   border: none;
+  padding: 10px;
 }
 /* lista contatti chat */
 .contact{
@@ -157,9 +158,12 @@ i:hover{
   list-style: none;
   border-bottom: 1px solid #B1B1B1;
   border-right: 1px solid #B1B1B1;
-  background-color: #FFFFFF;
 }
 .contact li:hover{
+  background-color: #E9EBEB;
+  cursor: pointer;
+}
+.contact_active{
   background-color: #E9EBEB;
 }
 .contact-image{
@@ -181,6 +185,7 @@ i:hover{
 }
 /* riquadro chat */
 .chat-window{
+  display: none;
   height: calc(100% - 160px);
   background-image: url(../img/background_chat.jpg);
   background-position: center;
@@ -189,6 +194,9 @@ i:hover{
   overflow-x: hidden;
   overflow-y: auto;
 }
+.active-window{
+  display: block;
+}
 .chat-message{
   position: relative;
   padding: 10px;
@@ -196,12 +204,25 @@ i:hover{
   border-radius: 10px;
   margin: 10px 0;
 }
+.chat-message:after{
+  content: '';
+  display: table;
+  clear: both;
+}
 .chat-message:hover{
   cursor: pointer;
 }
+.chat-message:hover > .chat-command > i{
+  display: block;
+}
+
 .chat-command{
   text-align: right;
   color: #B1B1B1;
+  float: right;
+}
+.chat-command i{
+  display: none;
 }
 .chat-command-window{
   width: 180px;
@@ -235,6 +256,9 @@ i:hover{
 }
 /* template chat */
 .template-chat{
+  display: none;
+}
+.stored-chat{
   display: none;
 }
 /* riquadro comandi chat */
