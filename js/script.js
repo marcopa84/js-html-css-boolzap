@@ -2,18 +2,30 @@ $(document).ready(
   function () {
 
     //MESSAGGI
-    // invia messaggio
+    // invia messaggio con click
     $('#send').click(
       function () {
         send ();
       }
     );
 
+    // invia messaggio con enter
     $('#input_chat').keypress(
       function () {
         if (event.which == 13 || event.keyCode == 13){
           send();
         }
+      }
+    );
+    // cambio icona
+    $('#input_chat').focusin(
+      function () {
+        $('#send').removeClass('fa-microphone').addClass('fa-paper-plane');
+      }
+    );
+    $('#input_chat').focusout(
+      function () {
+        $('#send').removeClass('fa-paper-plane').addClass('fa-microphone');
       }
     );
 
@@ -70,10 +82,6 @@ $(document).ready(
       }
     );
 
-
-
-
-
   }
 );
 
@@ -87,6 +95,7 @@ function send() {
   message_baloon.children('.chat-text').text(message_input);
   message_baloon.children('.chat-date').text(getTime());
   $('.active-window').append(message_baloon);
+  scrollMessage();
   $('#input_chat').val('');
   setTimeout(reply, 1000);
 }
@@ -108,6 +117,7 @@ function reply() {
   },time1);
   setTimeout(function () {
     $('.active-window').append(message_baloon);
+    scrollMessage();
     $('.first-row-data-date').text('Online');
   } ,time2);
   setTimeout(function () {
@@ -120,7 +130,15 @@ function getRandomIntInclusive(min, max) {
   max = Math.floor(max);
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
+//autoscroll
 
+function scrollMessage() {
+   // altezza elemento conversazione attiva
+    var heightContainer = $('.active-window').height();
+    console.log(heightContainer);
+    // spostiamo scroll container di tutte le conversazioni
+    $('.active-window').scrollTop(heightContainer);
+}
 //orario
 function getTime() {
   var data = new Date();
