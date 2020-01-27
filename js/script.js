@@ -100,16 +100,19 @@ function reply() {
   message_baloon.children('.chat-text').text(message_input[i]);
   message_baloon.children('.chat-date').text(getTime());
   $('.first-row-data-date').text('Online');
+  var time1 = getRandomIntInclusive(1000,4000);
+  var time2 = getRandomIntInclusive(4000,6000);
+  var time3 = getRandomIntInclusive(6000,8000);
   setTimeout(function () {
     $('.first-row-data-date').text('Sta scrivendo...');
-  },2000);
+  },time1);
   setTimeout(function () {
     $('.active-window').append(message_baloon);
     $('.first-row-data-date').text('Online');
-  } ,4000);
+  } ,time2);
   setTimeout(function () {
     $('.first-row-data-date').text('ultimo accesso oggi, alle ' + getTime());
-  },6000);
+  },time3);
 
 }
 function getRandomIntInclusive(min, max) {

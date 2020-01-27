@@ -1,7 +1,0 @@
-
-
-- show della chat selezionata sui contatti
-
-
-
-data-phone
