@@ -56,10 +56,17 @@ $(document).ready(
         $('#list_contact li').removeClass('contact_active');
         $(this).addClass('contact_active');
         var contactSelected = $(this).attr('data-phone');
-        console.log(contactSelected);
+        var contactSelectedImg = $(this).find('img').attr('src');
+        var contactSelectedName = $(this).find('.text-name').text();
+        console.log(contactSelectedImg);
+        console.log(contactSelectedName);
+        // mostro la finestra attiva
         $('.chat-window').removeClass('active-window');
-        // $('.chat-window [data-phone="' + contactSelected + '"]').addClass('active-window');
         $('.chat-window[data-phone="'+contactSelected+'"]').addClass('active-window');
+        // cambio la foto
+        $('.right-col').find('img').attr('src',contactSelectedImg);
+        // cambio nome
+        $('.right-col').find('.first-row-data-name').text(contactSelectedName);
       }
     );
 
@@ -92,8 +99,18 @@ function reply() {
   message_baloon.addClass('chat-in');
   message_baloon.children('.chat-text').text(message_input[i]);
   message_baloon.children('.chat-date').text(getTime());
-  $('.active-window').append(message_baloon);
-  $('.first-row-data-date').text('ultimo accesso oggi, alle ' + getTime());
+  $('.first-row-data-date').text('Online');
+  setTimeout(function () {
+    $('.first-row-data-date').text('Sta scrivendo...');
+  },2000);
+  setTimeout(function () {
+    $('.active-window').append(message_baloon);
+    $('.first-row-data-date').text('Online');
+  } ,4000);
+  setTimeout(function () {
+    $('.first-row-data-date').text('ultimo accesso oggi, alle ' + getTime());
+  },6000);
+
 }
 function getRandomIntInclusive(min, max) {
   min = Math.ceil(min);
