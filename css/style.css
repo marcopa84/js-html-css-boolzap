@@ -237,6 +237,7 @@ i:hover{
   clear: both;
   z-index: 2;
   display: none;
+  box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.5);
 }
 .chat-text{
   padding: 10px;
